@@ -11,25 +11,32 @@ Ensure your Linux environment has the necessary tools:
 ## 🚀 Quick Start
 1. **Install Dependencies**:
    ```bash
-   # Install the venv tool if you don't have it
     sudo apt update && sudo apt install python3-venv -y
 
-    # Create the environment (folder named 'venv')
-    python3 -m venv venv
-
-    # Install the packages into that environment
-    ./venv/bin/pip install flask flask-cors
-   ````
-2. **Test the Script**:
+1. **Create the environment (folder named 'venv')**:
    ```bash
-   python3 temp_api.py
+    python3 -m venv venv
    ````
-3. **Verify**:
-    
-    Open in your browser:
-    ```bash 
-    http://localhost:2013/api/temps/cpu 
-    ````
+
+1. **Activate the environment**:
+   ```bash
+    source venv/bin/activate
+   ````
+
+1. **Install flask**:
+   ```bash
+    pip install flask flask-cors
+   ````
+
+1. **Run the app**:
+   ```bash
+    python3 temps_api.py
+   ````
+
+1. **Access it from**:
+   ```bash
+    http://192.168.1.20:2013
+   ````
 
 ## ⚙️ Deployment (Systemd)
 To ensure the API runs 24/7 and starts on boot:
