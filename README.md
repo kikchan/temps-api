@@ -41,7 +41,10 @@ Ensure your Linux environment has the necessary tools:
 ## ⚙️ Deployment (Systemd)
 To ensure the API runs 24/7 and starts on boot:
 
-1. Create `temp_api.service` in `/etc/systemd/system/`.
+1. Create `temp_api.service` in `/etc/systemd/system/`:
+    ````bash
+    sudo nano /etc/systemd/system/temps_api.service
+    ````
 
 2. Add
     ````bash
@@ -55,7 +58,7 @@ To ensure the API runs 24/7 and starts on boot:
     # Replace with the actual directory where your script is located
     WorkingDirectory=/home/kikchan/.local/bin
     # Ensure the path to python3 and the script are absolute
-    ExecStart=/usr/bin/python3 /home/kikchan/.local/bin/temp_api.py
+    ExecStart=/usr/bin/python3 /home/kikchan/.local/bin/temps_api.py
     Restart=always
     RestartSec=5
 
@@ -66,8 +69,8 @@ To ensure the API runs 24/7 and starts on boot:
 3. Run:
     ````bash
     sudo systemctl daemon-reload
-    sudo systemctl enable temp_api.service
-    sudo systemctl start temp_api.service
+    sudo systemctl enable temps_api.service
+    sudo systemctl start temps_api.service
     ````
 
 ## 📊 Dashy Config
