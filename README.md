@@ -11,7 +11,14 @@ Ensure your Linux environment has the necessary tools:
 ## 🚀 Quick Start
 1. **Install Dependencies**:
    ```bash
-   pip install flask flask-cors
+   # Install the venv tool if you don't have it
+    sudo apt update && sudo apt install python3-venv -y
+
+    # Create the environment (folder named 'venv')
+    python3 -m venv venv
+
+    # Install the packages into that environment
+    ./venv/bin/pip install flask flask-cors
    ````
 2. **Test the Script**:
    ```bash
